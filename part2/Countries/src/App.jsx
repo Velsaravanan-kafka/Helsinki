@@ -38,14 +38,13 @@ const App = () => {
   const handleFilterChange = event => {
     setFilter(event.target.value);
   };
-
   return (
     <div>
       <div>
         find countries <input value={filter} onChange={handleFilterChange} />
       </div>
       <Results
-        countries={countriesToShow}
+        countries = {countriesToShow}
         handleShowClick={setFilter} // Pass setFilter directly
         weather={weather}
       />
