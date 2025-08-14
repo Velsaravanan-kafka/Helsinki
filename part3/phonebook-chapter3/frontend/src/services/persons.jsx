@@ -1,5 +1,7 @@
 import axios from 'axios';
-const baseUrl = 'api/persons';
+const baseUrl = process.env.NODE_ENV === 'production'
+  ? 'https://helsinki-9yvy.onrender.com/api/persons'
+  : '/api/persons';
 
 const getAll = () => {
   const request = axios.get(baseUrl);
